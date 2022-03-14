@@ -8,7 +8,7 @@ import {
 const Home=()=>{
 return (
     <View>
-    <Text>Home home</Text>
+    <Text>Hhhh</Text>
     </View>
 );
 };

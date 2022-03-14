@@ -21,7 +21,7 @@ const Splash = ({navigation}) => {
 
   useEffect(()=>{
     setTimeout(()=>{
-      navigation.replace('Home')
+      navigation.replace('HomeTabs')
     },2000);
   },[]);
   return (
