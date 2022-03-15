@@ -1,4 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import CheckBox from '@react-native-community/checkbox';
+
 import React, { useEffect, useState } from 'react';
 import {
   View, Text, StyleSheet, TouchableOpacity, Alert
@@ -11,6 +13,7 @@ import { setTask, setTaskId } from '../redux/todoSlice'
 const Task = ({ navigation }) => {
   const [title, setTitle] = useState('')
   const [desc, setDesc] = useState('')
+  const [done, setDone] = useState(false)
 
   const dispatch = useDispatch();
   const todos = useSelector((state) => state.todos)
@@ -19,20 +22,19 @@ const Task = ({ navigation }) => {
     const Task = todos.tasks.find(task => task.ID === todos.taskID)
     if (Task) {
 
-      const tt = Task.Title
-      setTitle(tt)
+      //  const tt = Task.Title
+      setTitle(Task.Title)
       setDesc(Task.Desc)
+      setDone(Task.Done)
 
-      console.log("Task title " + title)
-      console.log("Task Des " + desc)
+      // console.log("Task title " + title)
+      // console.log("Task Des " + desc)
     }
   }
 
-
-
   useEffect(() => {
     getTask()
-  })
+  }, [])
 
   const onPressHandle = () => {
     if (title.length == 0 || desc.length == 0) {
@@ -43,7 +45,8 @@ const Task = ({ navigation }) => {
         const Task = {
           ID: todos.taskID,
           Title: title,
-          Desc: desc
+          Desc: desc,
+          Done: done
         }
         const index = todos.tasks.findIndex(task => task.ID === todos.taskID);
 
@@ -81,6 +84,15 @@ const Task = ({ navigation }) => {
         placeholder='Description'
         onChangeText={(value) => setDesc(value)} />
 
+      <View style={styles.checkBox}>
+        <CheckBox
+          disabled={false}
+          value={done}
+          onValueChange={(newValue) => setDone(newValue)}
+        />
+        <Text style={styles.checkBoxText}>Task Done</Text>
+      </View>
+
       <TouchableOpacity style={styles.button}
         onPress={onPressHandle} >
         <Text style={styles.text}>Save Task</Text>
@@ -111,6 +123,13 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#000000"
+  },
+  checkBox: {
+    flexDirection: 'row',
+    margin: 10
+  },
+  checkBoxText: {
+    fontSize: 20
   }
 })
 

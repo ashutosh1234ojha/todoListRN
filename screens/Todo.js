@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import {
-  View, Text, StyleSheet, FlatList
+  View, Text, StyleSheet, FlatList, Alert
 } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
@@ -14,10 +14,22 @@ const Todo = ({ navigation }) => {
   const onPressHandle = () => {
     dispatch(setTaskId(todos.tasks.length + 1))
     //  console.log(todos.taskID)
-    console.log("Lenght " + todos.tasks.length)
-    console.log(todos)
+    // console.log("Lenght " + todos.tasks.length)
+    // console.log(todos)
     navigation.navigate("Task")
   }
+
+  const onPressDelete = (id) => {
+    const filteredTask = todos.tasks.filter(task => task.ID !== id);
+    AsyncStorage.setItem('Tasks', JSON.stringify(filteredTask))
+      .then(() => {
+        dispatch(setTask(filteredTask));
+        Alert.alert('Success!, task removed')
+      }).catch(err => {
+        console.log(err)
+      })
+  }
+
 
   const dispatch = useDispatch();
   const todos = useSelector((state) => state.todos)
@@ -41,20 +53,29 @@ const Todo = ({ navigation }) => {
       <FlatList style={styles.item}
         data={todos.tasks}
         renderItem={({ item }) => (
-          <TouchableOpacity
-          onPress={()=>{
-            dispatch(setTaskId(item.ID))
-            navigation.navigate("Task")
-          }}>
-            <Text style={styles.title}>{item.Title}</Text>
-            <Text style={styles.subtitle} >{item.Desc}</Text>
-          </TouchableOpacity>
+          <View style={styles.main}>
+            <TouchableOpacity
+              onPress={() => {
+                dispatch(setTaskId(item.ID))
+                navigation.navigate("Task")
+              }}>
+              <Text style={styles.title}>{item.Title}</Text>
+              <Text style={styles.subtitle} >{item.Desc}</Text>
+            </TouchableOpacity>
+            <View style={styles.buttonView}>
+              <TouchableOpacity style={styles.buttonDelete}
+                onPress={()=>onPressDelete(item.ID)}
+              >
+                <FontAwesome5 name={'trash'} size={14} color={'#FF0000'} />
+              </TouchableOpacity>
+            </View>
+          </View>
         )}
         keyExtractor={(item, index) => index.toString()}
       />
       <View style={styles.buttonView}>
         <TouchableOpacity style={styles.button}
-          onPress={onPressHandle}
+          onPress={()=>onPressHandle()}
         >
           <FontAwesome5 name={'plus'} size={25} color={'#ffffff'} />
         </TouchableOpacity>
@@ -76,6 +97,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     elevation: 5,
+
+  },
+  buttonDelete: {
+    width: 40,
+    height: 40,
+    backgroundColor: '#FF0000	',
+    borderRadius: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
+    elevation: 5,
+
 
   },
   buttonView: {
@@ -100,6 +132,10 @@ const styles = StyleSheet.create({
     color: "#999999",
     fontSize: 20,
     margin: 5
+  },
+  main: {
+    flex: 1,
+    flexDirection: 'row'
   }
 })
 
