@@ -33,8 +33,9 @@ const Task = ({ navigation }) => {
   }
 
   useEffect(() => {
+    console.log("UseEffect")
     getTask()
-  }, [])
+  },[])
 
   const onPressHandle = () => {
     if (title.length == 0 || desc.length == 0) {
