@@ -21,14 +21,9 @@ const Task = ({ navigation }) => {
   const getTask = () => {
     const Task = todos.tasks.find(task => task.ID === todos.taskID)
     if (Task) {
-
-      //  const tt = Task.Title
       setTitle(Task.Title)
       setDesc(Task.Desc)
       setDone(Task.Done)
-
-      // console.log("Task title " + title)
-      // console.log("Task Des " + desc)
     }
   }
 

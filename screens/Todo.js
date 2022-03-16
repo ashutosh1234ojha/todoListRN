@@ -46,6 +46,33 @@ const Todo = ({ navigation }) => {
     getTasks();
   }, [])
 
+  const checkTask = (id, newValue) => {
+
+    const index = todos.tasks.findIndex(task => task.ID === id);
+    if (index > -1) {
+      let newTasks = [...todos.tasks];
+      const Task = {
+        ID: newTasks[index].ID,
+        Title: newTasks[index].Title,
+        Desc: newTasks[index].Desc,
+        Done: newValue
+      }
+
+      const n = newTasks[index].Desc;
+      console.log("previous value" + n)
+      //newTasks[index].Done = newValue;
+        newTasks[index] = Task;
+
+      AsyncStorage.setItem('Tasks', JSON.stringify(newTasks))
+        .then(() => {
+          dispatch(setTask(newTasks))
+          Alert.alert('Success!, task changed')
+        })
+        .catch(err => { console.log(err) })
+    }
+
+  }
+
   return (
     <View style={styles.body}>
       <FlatList style={styles.item}
@@ -53,7 +80,10 @@ const Todo = ({ navigation }) => {
         renderItem={({ item }) => (
           <View style={styles.main}>
             <CheckBox
-              value={item.Done} />
+              disabled={false}
+              value={item.Done}
+              onValueChange={(newValue) => { checkTask(item.ID, newValue) }}
+            />
             <TouchableOpacity
               onPress={() => {
                 dispatch(setTaskId(item.ID))
@@ -137,7 +167,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center', //Centered vertically
-  
+
   }
 })
 
