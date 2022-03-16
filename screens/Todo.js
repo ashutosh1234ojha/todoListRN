@@ -8,14 +8,13 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { setTask, setTaskId } from '../redux/todoSlice';
 import { useSelector, useDispatch } from 'react-redux'
+import CheckBox from '@react-native-community/checkbox';
+
 
 
 const Todo = ({ navigation }) => {
   const onPressHandle = () => {
     dispatch(setTaskId(todos.tasks.length + 1))
-    //  console.log(todos.taskID)
-    // console.log("Lenght " + todos.tasks.length)
-    // console.log(todos)
     navigation.navigate("Task")
   }
 
@@ -33,7 +32,6 @@ const Todo = ({ navigation }) => {
 
   const dispatch = useDispatch();
   const todos = useSelector((state) => state.todos)
-  // const { tasks, taskID } = useSelector((state) => state.todos)
 
   const getTasks = () => {
     AsyncStorage.getItem('Tasks').then(tasks => {
@@ -54,6 +52,8 @@ const Todo = ({ navigation }) => {
         data={todos.tasks}
         renderItem={({ item }) => (
           <View style={styles.main}>
+            <CheckBox
+              value={item.Done} />
             <TouchableOpacity
               onPress={() => {
                 dispatch(setTaskId(item.ID))
@@ -64,7 +64,7 @@ const Todo = ({ navigation }) => {
             </TouchableOpacity>
             <View style={styles.buttonView}>
               <TouchableOpacity style={styles.buttonDelete}
-                onPress={()=>onPressDelete(item.ID)}
+                onPress={() => onPressDelete(item.ID)}
               >
                 <FontAwesome5 name={'trash'} size={14} color={'#FF0000'} />
               </TouchableOpacity>
@@ -75,7 +75,7 @@ const Todo = ({ navigation }) => {
       />
       <View style={styles.buttonView}>
         <TouchableOpacity style={styles.button}
-          onPress={()=>onPressHandle()}
+          onPress={() => onPressHandle()}
         >
           <FontAwesome5 name={'plus'} size={25} color={'#ffffff'} />
         </TouchableOpacity>
@@ -135,7 +135,9 @@ const styles = StyleSheet.create({
   },
   main: {
     flex: 1,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    alignItems: 'center', //Centered vertically
+  
   }
 })
 
