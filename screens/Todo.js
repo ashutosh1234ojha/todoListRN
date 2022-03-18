@@ -58,8 +58,6 @@ const Todo = ({ navigation }) => {
         Done: newValue
       }
 
-      const n = newTasks[index].Desc;
-      console.log("previous value" + n)
       //newTasks[index].Done = newValue;
         newTasks[index] = Task;
 
@@ -76,7 +74,7 @@ const Todo = ({ navigation }) => {
   return (
     <View style={styles.body}>
       <FlatList style={styles.item}
-        data={todos.tasks}
+        data={todos.tasks.filter(task=>task.Done===false)}
         renderItem={({ item }) => (
           <View style={styles.main}>
             <CheckBox
