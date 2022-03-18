@@ -9,11 +9,14 @@ import { TextInput } from 'react-native-gesture-handler';
 
 import { useSelector, useDispatch } from 'react-redux'
 import { setTask, setTaskId } from '../redux/todoSlice'
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+
 
 const Task = ({ navigation }) => {
   const [title, setTitle] = useState('')
   const [desc, setDesc] = useState('')
   const [done, setDone] = useState(false)
+  const [color, setColor] = useState('#FFFF00')
 
   const dispatch = useDispatch();
   const todos = useSelector((state) => state.todos)
@@ -30,7 +33,7 @@ const Task = ({ navigation }) => {
   useEffect(() => {
     console.log("UseEffect")
     getTask()
-  },[])
+  }, [])
 
   const onPressHandle = () => {
     if (title.length == 0 || desc.length == 0) {
@@ -42,7 +45,8 @@ const Task = ({ navigation }) => {
           ID: todos.taskID,
           Title: title,
           Desc: desc,
-          Done: done
+          Done: done,
+          Color:color
         }
         const index = todos.tasks.findIndex(task => task.ID === todos.taskID);
 
@@ -88,7 +92,32 @@ const Task = ({ navigation }) => {
         />
         <Text style={styles.checkBoxText}>Task Done</Text>
       </View>
-
+      <View style={styles.colorBar}>
+        <TouchableOpacity style={styles.colorYellow}
+          onPress={() => { setColor('Yellow') }} >
+          {
+            color === 'Yellow' && <FontAwesome5 name={'check'} size={14} color={'#000000'} />
+          }
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.colorAquamarine}
+          onPress={() => { setColor('Aquamarine') }}>
+          {
+            color === 'Aquamarine' && <FontAwesome5 name={'check'} size={14} color={'#000000'} />
+          }
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.colorBlue}
+          onPress={() => { setColor('Blue') }} >
+          {
+            color === 'Blue' && <FontAwesome5 name={'check'} size={14} color={'#000000'} />
+          }
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.colorGreen}
+          onPress={() => { setColor('Green') }} >
+          {
+            color === 'Green' && <FontAwesome5 name={'check'} size={14} color={'#000000'} />
+          }
+        </TouchableOpacity>
+      </View>
       <TouchableOpacity style={styles.button}
         onPress={onPressHandle} >
         <Text style={styles.text}>Save Task</Text>
@@ -122,10 +151,42 @@ const styles = StyleSheet.create({
   },
   checkBox: {
     flexDirection: 'row',
-    margin: 10
+    margin: 10,
+    justifyContent: 'center'
   },
   checkBoxText: {
     fontSize: 20
+  },
+  colorBar: {
+    flexDirection: 'row',
+    height: 50,
+    borderRadius: 6,
+    borderWidth: 2,
+    margin: 5
+  },
+  colorYellow: {
+    flex: 1,
+    backgroundColor: '#FFFF00',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  colorAquamarine: {
+    flex: 1,
+    backgroundColor: '#B2D7DA',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  colorBlue: {
+    flex: 1,
+    backgroundColor: '#0E86D4',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  colorGreen: {
+    flex: 1,
+    backgroundColor: '#00FF00',
+    justifyContent: 'center',
+    alignItems: 'center',
   }
 })
 

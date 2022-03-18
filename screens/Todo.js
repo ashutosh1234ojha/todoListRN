@@ -59,7 +59,7 @@ const Todo = ({ navigation }) => {
       }
 
       //newTasks[index].Done = newValue;
-        newTasks[index] = Task;
+      newTasks[index] = Task;
 
       AsyncStorage.setItem('Tasks', JSON.stringify(newTasks))
         .then(() => {
@@ -71,12 +71,34 @@ const Todo = ({ navigation }) => {
 
   }
 
+  const itemsStyle = function (options) {
+    return {
+      flex: 1,
+      flexDirection: 'row',
+      alignItems: 'center', 
+      backgroundColor: getColor(options)
+    }
+  }
+
+  function getColor(itm) {
+
+    if (itm === 'Aquamarine') {
+      return '#B2D7DA';
+    } else if (itm === 'Yellow') {
+      return '#FFFF00';
+    } else if (itm === 'Green') {
+      return '#00FF00';
+    } else {
+      return "#0E86D4"
+    }
+  }
+
   return (
     <View style={styles.body}>
       <FlatList style={styles.item}
-        data={todos.tasks.filter(task=>task.Done===false)}
+        data={todos.tasks.filter(task => task.Done === false)}
         renderItem={({ item }) => (
-          <View style={styles.main}>
+          <View style={itemsStyle(item.Color)}>
             <CheckBox
               disabled={false}
               value={item.Done}
