@@ -16,7 +16,7 @@ const Task = ({ navigation }) => {
   const [title, setTitle] = useState('')
   const [desc, setDesc] = useState('')
   const [done, setDone] = useState(false)
-  const [color, setColor] = useState('#FFFF00')
+  const [color, setColor] = useState('Yellow')
 
   const dispatch = useDispatch();
   const todos = useSelector((state) => state.todos)
@@ -46,7 +46,7 @@ const Task = ({ navigation }) => {
           Title: title,
           Desc: desc,
           Done: done,
-          Color:color
+          Color: color
         }
         const index = todos.tasks.findIndex(task => task.ID === todos.taskID);
 
@@ -83,6 +83,14 @@ const Task = ({ navigation }) => {
         value={desc}
         placeholder='Description'
         onChangeText={(value) => setDesc(value)} />
+
+      <View style={styles.extraRow}>
+        <TouchableOpacity style={styles.colorYellow}
+          onPress={() => { }} >
+          <FontAwesome5 name={'bell'} size={14} color={'#000000'} />
+
+        </TouchableOpacity>
+      </View>
 
       <View style={styles.checkBox}>
         <CheckBox
@@ -139,7 +147,7 @@ const styles = StyleSheet.create({
   button: {
 
     height: 50,
-    backgroundColor: '#00FF00',
+    backgroundColor: '#00Fd00',
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
@@ -187,6 +195,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#00FF00',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  extraRow: {
+    margin: 10,
+    height: 50,
+    backgroundColor: '#f8674f'
+
   }
 })
 
