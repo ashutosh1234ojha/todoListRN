@@ -3,7 +3,7 @@ import CheckBox from '@react-native-community/checkbox';
 
 import React, { useEffect, useState } from 'react';
 import {
-  View, Text, StyleSheet, TouchableOpacity, Alert
+  View, Text, StyleSheet, TouchableOpacity, Alert, Modal
 } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 
@@ -17,6 +17,9 @@ const Task = ({ navigation }) => {
   const [desc, setDesc] = useState('')
   const [done, setDone] = useState(false)
   const [color, setColor] = useState('Yellow')
+  const [showBellModal, setShowBellModal] = useState(false)
+  const [bellTime, setBellTime] = useState("1")
+
 
   const dispatch = useDispatch();
   const todos = useSelector((state) => state.todos)
@@ -71,9 +74,53 @@ const Task = ({ navigation }) => {
     }
   }
 
+  const setTaskAlarm = () => {
+
+  }
+
 
   return (
-    <View>
+    <View >
+
+      <Modal
+        visible={showBellModal}
+        transparent
+        onRequestClose={() => {
+          setShowBellModal(false)
+        }}
+        animationType='slide'
+        hardwareAccelerated
+      >
+
+        <View style={styles.centeredView}>
+
+          <View style={styles.bellModal}>
+            <View style={styles.bellBody}>
+
+              <Text style={styles.text}>Remind me After</Text>
+              <TextInput style={styles.bellInput}
+                keyboardType='numeric'
+                value={bellTime}
+                onChangeText={(value) => setBellTime(value)}
+              />
+              <Text style={styles.text}>minute(s)</Text>
+              <View style={styles.bellButton}>
+                <TouchableOpacity style={styles.bellCancelButton} onPress={() => { setShowBellModal(false) }}>
+                  <Text style={styles.text}>Cancel</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.bellOkButton}
+                  onPress={() => { setShowBellModal(false) }}
+                >
+                  <Text style={styles.text}>Ok</Text>
+                </TouchableOpacity>
+
+              </View >
+            </View >
+          </View >
+
+        </View >
+      </Modal>
       <TextInput style={styles.input}
         value={title}
         placeholder='Title'
@@ -86,7 +133,7 @@ const Task = ({ navigation }) => {
 
       <View style={styles.extraRow}>
         <TouchableOpacity style={styles.colorYellow}
-          onPress={() => { }} >
+          onPress={() => { setShowBellModal(true) }} >
           <FontAwesome5 name={'bell'} size={14} color={'#000000'} />
 
         </TouchableOpacity>
@@ -200,7 +247,72 @@ const styles = StyleSheet.create({
     margin: 10,
     height: 50,
     backgroundColor: '#f8674f'
+  },
+  extraButton: {
+    margin: 10,
+    height: 50,
+    backgroundColor: '#f8674f'
 
+  },
+  centeredView: {
+    flex: 1,
+    backgroundColor: '#00000099',
+    justifyContent: 'center',
+    alignItems: 'center',
+
+  },
+  bellModal: {
+    width: 300,
+    height: 200,
+    backgroundColor: '#ffffff',
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: '#000000'
+
+  },
+  bellBody: {
+    height: 150,
+    // justifyContent: 'center',
+    alignItems: 'center',
+    // margin: 30
+    marginTop:30
+  },
+  bellButton: {
+    flexDirection: 'row',
+    height: 50,
+    marginTop:10
+
+  },
+  bellInput: {
+
+    height: 50,
+    width:50,
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: '#555555',
+    borderRadius: 10,
+    backgroundColor: '#ffffff',
+    textAlign: 'center',
+    fontSize: 20,
+     margin: 10
+  },
+  bellCancelButton: {
+
+    flex: 1,
+    borderWidth: 1,
+    borderColor: '#000000',
+    borderBottomLeftRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  bellOkButton: {
+
+    flex: 1,
+    borderWidth: 1,
+    borderColor: '#000000',
+    borderBottomRightRadius: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
   }
 })
 
