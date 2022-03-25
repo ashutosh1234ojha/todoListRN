@@ -1,0 +1,113 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.todolistrn"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:4:5-67
+11-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.CAMERA" />
+12-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:5:5-64
+12-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:5:22-62
+13
+14    <uses-feature
+14-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:6:5-85
+15        android:name="android.hardware.camera"
+15-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:6:19-57
+16        android:required="false" />
+16-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:6:58-82
+17    <uses-feature
+17-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:7:1-87
+18        android:name="android.hardware.camera.front"
+18-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:7:15-59
+19        android:required="false" />
+19-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:7:60-84
+20
+21    <queries>
+21-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-13:15
+22        <intent>
+22-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:10:9-12:18
+23            <action android:name="android.media.action.IMAGE_CAPTURE" />
+23-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-73
+23-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:11:21-70
+24        </intent>
+25    </queries>
+26
+27    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+27-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:15:5-81
+27-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:15:22-78
+28
+29    <application
+29-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:10:5-28:19
+30        android:name="com.todolistrn.MainApplication"
+30-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:11:7-38
+31        android:allowBackup="false"
+31-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:15:7-34
+32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+32-->[androidx.core:core:1.6.0] /Users/ashutoshojha/.gradle/caches/transforms-3/9f18c6b50baa776d71894ad120630276/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+33        android:icon="@mipmap/ic_launcher"
+33-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:13:7-41
+34        android:label="@string/app_name"
+34-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:12:7-39
+35        android:roundIcon="@mipmap/ic_launcher_round"
+35-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:14:7-52
+36        android:theme="@style/AppTheme" >
+36-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:16:7-38
+37        <activity
+37-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:17:7-27:18
+38            android:name="com.todolistrn.MainActivity"
+38-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:18:9-37
+39            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+39-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:20:9-86
+40            android:label="@string/app_name"
+40-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:19:9-41
+41            android:launchMode="singleTask"
+41-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:21:9-40
+42            android:windowSoftInputMode="adjustResize" >
+42-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:22:9-51
+43            <intent-filter>
+43-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:23:9-26:25
+44                <action android:name="android.intent.action.MAIN" />
+44-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:24:13-65
+44-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:24:21-62
+45
+46                <category android:name="android.intent.category.LAUNCHER" />
+46-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:25:13-73
+46-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:25:23-70
+47            </intent-filter>
+48        </activity>
+49
+50        <provider
+50-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:18:9-26:20
+51            android:name="androidx.core.content.FileProvider"
+51-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:19:13-62
+52            android:authorities="com.todolistrn.provider"
+52-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:20:13-60
+53            android:exported="false"
+53-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:21:13-37
+54            android:grantUriPermissions="true" >
+54-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:22:13-47
+55            <meta-data
+55-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:23:13-25:58
+56                android:name="android.support.FILE_PROVIDER_PATHS"
+56-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:24:17-67
+57                android:resource="@xml/provider_paths" />
+57-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:25:17-55
+58        </provider>
+59
+60        <activity
+60-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:28:9-30:72
+61            android:name="com.yalantis.ucrop.UCropActivity"
+61-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:29:13-60
+62            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+62-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:30:13-69
+63    </application>
+64
+65</manifest>

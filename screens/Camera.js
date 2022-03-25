@@ -6,51 +6,105 @@
  * @flow strict-local
  */
 
- import React, { useEffect } from 'react';
- import {
-   StyleSheet,
-   Text,
-   View, Image
- } from 'react-native';
- 
- import GlobalStylesheet from '../globalstyle/GlobalStylesheet';
- 
- 
- 
- const Camera = ({navigation}) => {
- 
+import React, { useState } from 'react';
+import {
+    StyleSheet,
+    Text,
+    View, Image, TouchableOpacity
+} from 'react-native';
+import { color } from 'react-native-reanimated';
+import ImagePicker from 'react-native-image-crop-picker';
 
-   return (
-     <View style={styles.parent}>
-     <Text>Camera</Text>
-     
-     </View>
- 
-   );
- };
- 
- // <Text style={GlobalStylesheet.CustomFontBig}>Test</Text>
- 
- 
- const styles = StyleSheet.create({
-  body:{
-   width: '100%',
-   height: undefined,
-   aspectRatio: 1, 
-   resizeMode: 'contain'
- 
- },
- parent:{
-   justifyContent: 'center',
-   flex:1
- 
- },
- text:{
- fontSize:34,
- textAlign: 'center', // <-- the magic
- 
- },
- });
- 
- export default Camera;
- 
+
+
+
+const Camera = ({ navigation }) => {
+
+    const [cameraImage, setCameraImage] = useState('https://reactnative.dev/img/tiny_logo.png')
+    const openCamera = () => {
+        ImagePicker.openCamera({
+            width: 300,
+            height: 400,
+            cropping: true,
+          }).then(image => {
+            console.log(image);
+            setCameraImage(image.path)
+          });
+
+        // ImagePicker.openPicker({
+        //     width: 300,
+        //     height: 400,
+        //     cropping: true
+        //   }).then(image => {
+        //     // console.log("ImageConsole",CameraResult);
+
+        //      console.log("ImageConsole",image);
+        //     setCameraImage(image.path)
+        //   });
+    }
+
+    return (
+        <View style={styles.parent}>
+            <View style={styles.bellButton}>
+                <TouchableOpacity style={styles.bellOkButton}
+                    onPress={() => { openCamera() }}
+                >
+                    <Text style={styles.text}>Open Camera</Text>
+                </TouchableOpacity>
+
+            </View >
+
+            <Image
+        style={styles.tinyLogo}
+        source={{
+          uri: cameraImage,
+        }}
+      />
+
+        </View>
+
+    );
+};
+
+
+
+const styles = StyleSheet.create({
+    body: {
+
+        flex: 1
+
+    },
+    text: {
+        color: "#ffffff"
+    },
+    bellButton: {
+        flexDirection: 'row',
+        height: 100,
+        margin: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+
+    },
+    tinyLogo: {
+        width: 200,
+        height: 200,
+       justifyContent: 'center',
+     alignItems: 'center',
+      },
+
+
+    bellOkButton: {
+        //  flex: 1,
+        borderWidth: 1,
+        borderColor: '#909090',
+        borderRadius: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'steelblue',
+        height: 50,
+        width: 200
+
+    }
+});
+
+export default Camera;

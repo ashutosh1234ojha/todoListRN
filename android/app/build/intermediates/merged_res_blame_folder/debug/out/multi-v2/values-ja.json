@@ -29,6 +29,23 @@
                         "endColumns": "100",
                         "endOffsets": "2866"
                     }
+                },
+                {
+                    "source": "/Users/ashutoshojha/.gradle/caches/transforms-3/ede209314179b91289413b8be3352c84/transformed/jetified-ucrop-2.2.6-native/res/values-ja/values-ja.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,97,153,208,257,301",
+                        "endColumns": "41,55,54,48,43,42",
+                        "endOffsets": "92,148,203,252,296,339"
+                    },
+                    "to": {
+                        "startLines": "31,32,33,34,35,36",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "2871,2913,2969,3024,3073,3117",
+                        "endColumns": "41,55,54,48,43,42",
+                        "endOffsets": "2908,2964,3019,3068,3112,3155"
+                    }
                 }
             ]
         }
