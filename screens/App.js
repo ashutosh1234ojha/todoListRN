@@ -13,6 +13,8 @@ import Todo from './Todo';
 import Done from './Done';
 import Task from './Task';
 import Home from './Home';
+import Camera from './Camera';
+
 //import store from '../redux/store';
 import { Provider } from 'react-redux';
 
@@ -108,6 +110,8 @@ const App = () => {
       <RootStack.Screen name="HomeTabs" component={HomeTabs}  options={{ headerShown: false }} />
       <RootStack.Screen name="Task" component={Task} />
       <RootStack.Screen name="Home" component={Home} />
+      <RootStack.Screen name="Camera" component={Camera} />
+      
     </RootStack.Navigator>
   </NavigationContainer>
      </Provider>

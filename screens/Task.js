@@ -78,6 +78,12 @@ const Task = ({ navigation }) => {
 
   }
 
+  const navigateToCamera = () => {
+
+    navigation.navigate("Camera")
+  }
+
+
 
   return (
     <View >
@@ -132,11 +138,16 @@ const Task = ({ navigation }) => {
         onChangeText={(value) => setDesc(value)} />
 
       <View style={styles.extraRow}>
-        <TouchableOpacity style={styles.colorYellow}
-          onPress={() => { setShowBellModal(true) }} >
+        <TouchableOpacity style={styles.extraButton}
+          onPress={() => { setTaskAlarm() }} >
           <FontAwesome5 name={'bell'} size={14} color={'#000000'} />
 
         </TouchableOpacity>
+        <TouchableOpacity style={styles.extraButtonCamera}
+        onPress={() => { navigateToCamera() }} >
+        <FontAwesome5 name={'camera'} size={14} color={'#000000'} />
+
+      </TouchableOpacity>
       </View>
 
       <View style={styles.checkBox}>
@@ -246,12 +257,26 @@ const styles = StyleSheet.create({
   extraRow: {
     margin: 10,
     height: 50,
-    backgroundColor: '#f8674f'
+  //  backgroundColor: '#f8674f',
+    flexDirection:'row',
+    
   },
   extraButton: {
-    margin: 10,
+    marginRight:10,
     height: 50,
-    backgroundColor: '#f8674f'
+    backgroundColor: '#f8674f',
+    flex:1,
+    justifyContent: 'center',
+    alignItems: 'center',
+
+  },
+  extraButtonCamera: {
+    marginLeft:10,
+    height: 50,
+    backgroundColor: '#00FF00',
+    flex:1,
+    justifyContent: 'center',
+    alignItems: 'center',
 
   },
   centeredView: {
