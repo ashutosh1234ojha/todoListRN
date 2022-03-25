@@ -10,15 +10,21 @@ import React, { useState } from 'react';
 import {
     StyleSheet,
     Text,
-    View, Image, TouchableOpacity
+    View, Image, TouchableOpacity,Alert
 } from 'react-native';
 import { color } from 'react-native-reanimated';
 import ImagePicker from 'react-native-image-crop-picker';
+import { useSelector, useDispatch } from 'react-redux'
+import { setTask, setTaskId } from '../redux/todoSlice'
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 
 
-const Camera = ({ navigation }) => {
+
+const Camera = ({ navigation, route }) => {
+    const dispatch = useDispatch();
+    const todos = useSelector((state) => state.todos)
 
     const [cameraImage, setCameraImage] = useState('https://reactnative.dev/img/tiny_logo.png')
     const openCamera = () => {
@@ -26,21 +32,78 @@ const Camera = ({ navigation }) => {
             width: 300,
             height: 400,
             cropping: true,
-          }).then(image => {
+        }).then(image => {
             console.log(image);
             setCameraImage(image.path)
-          });
+            updateTask(route.params.id, image.path)
+        });
+    }
 
-        // ImagePicker.openPicker({
-        //     width: 300,
-        //     height: 400,
-        //     cropping: true
-        //   }).then(image => {
-        //     // console.log("ImageConsole",CameraResult);
+    const updateTask = (id, path) => {
+        try {
 
-        //      console.log("ImageConsole",image);
-        //     setCameraImage(image.path)
-        //   });
+          
+
+            const index = todos.tasks.findIndex(task => task.ID === id);
+            let newTask = [];
+            if (index > -1) {
+
+                const Task = {
+                    ID: index,
+                    Title: todos.tasks[index].Title,
+                    Desc: todos.tasks[index].Desc,
+                    Done: todos.tasks[index].Done,
+                    Color: todos.tasks[index].Color,
+                    Image: todos.tasks[index].Image
+                }
+
+                newTask = [...todos.tasks];
+                // newTask[index].Image = path;
+                   newTask[index] = Task;
+
+
+                AsyncStorage.setItem("Tasks", JSON.stringify(newTask)).then(() => {
+                    // dispatch(setTask(newTask))
+                    dispatch(setTask(newTask))
+                  }).catch(err => console.log(err))
+                Alert.alert("Successfully task image saved");
+                navigation.goBack();
+
+            }
+            else {
+                const Task = {
+                    ID: 1,
+                    Title:"",
+                    Desc: "",
+                    Done: false,
+                    Color: "#00Fd00",
+                    Image: path
+                }
+                newTask = [...todos.tasks, Task];
+                AsyncStorage.setItem("Tasks", JSON.stringify(newTask)).then(() => {
+                    // dispatch(setTask(newTask))
+                    dispatch(setTask(newTask))
+                  }).catch(err => console.log(err))
+                Alert.alert("Successfully task image saved");
+                navigation.goBack();
+            }
+
+        } catch (error) {
+            console.log(error)
+        }
+        // const index = todos.tasks.findIndex(task => task.ID === todos.taskID);
+        // const Task = {
+        //     ID: todos.taskID,
+        //     Title: title,
+        //     Desc: desc,
+        //     Done: done,
+        //     Color: color,
+        //     Image:path
+        //   }
+
+
+
+
     }
 
     return (
@@ -55,11 +118,11 @@ const Camera = ({ navigation }) => {
             </View >
 
             <Image
-        style={styles.tinyLogo}
-        source={{
-          uri: cameraImage,
-        }}
-      />
+                style={styles.tinyLogo}
+                source={{
+                    uri: cameraImage,
+                }}
+            />
 
         </View>
 
@@ -88,9 +151,9 @@ const styles = StyleSheet.create({
     tinyLogo: {
         width: 200,
         height: 200,
-       justifyContent: 'center',
-     alignItems: 'center',
-      },
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
 
 
     bellOkButton: {

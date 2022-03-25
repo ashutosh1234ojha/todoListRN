@@ -3,7 +3,7 @@ import CheckBox from '@react-native-community/checkbox';
 
 import React, { useEffect, useState } from 'react';
 import {
-  View, Text, StyleSheet, TouchableOpacity, Alert, Modal
+  View, Text, StyleSheet, TouchableOpacity, Alert, Modal, Image
 } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 
@@ -19,6 +19,8 @@ const Task = ({ navigation }) => {
   const [color, setColor] = useState('Yellow')
   const [showBellModal, setShowBellModal] = useState(false)
   const [bellTime, setBellTime] = useState("1")
+  const [image, setImage] = useState('')
+
 
 
   const dispatch = useDispatch();
@@ -27,9 +29,13 @@ const Task = ({ navigation }) => {
   const getTask = () => {
     const Task = todos.tasks.find(task => task.ID === todos.taskID)
     if (Task) {
+      console.log("Task "+Task.Image)
+
       setTitle(Task.Title)
       setDesc(Task.Desc)
       setDone(Task.Done)
+      setImage(Task.Image)
+
     }
   }
 
@@ -49,7 +55,8 @@ const Task = ({ navigation }) => {
           Title: title,
           Desc: desc,
           Done: done,
-          Color: color
+          Color: color,
+          Image: image
         }
         const index = todos.tasks.findIndex(task => task.ID === todos.taskID);
 
@@ -80,14 +87,13 @@ const Task = ({ navigation }) => {
 
   const navigateToCamera = () => {
 
-    navigation.navigate("Camera")
+    navigation.navigate("Camera", { id: todos.taskID })
   }
 
 
 
   return (
     <View >
-
       <Modal
         visible={showBellModal}
         transparent
@@ -144,10 +150,10 @@ const Task = ({ navigation }) => {
 
         </TouchableOpacity>
         <TouchableOpacity style={styles.extraButtonCamera}
-        onPress={() => { navigateToCamera() }} >
-        <FontAwesome5 name={'camera'} size={14} color={'#000000'} />
+          onPress={() => { navigateToCamera() }} >
+          <FontAwesome5 name={'camera'} size={14} color={'#000000'} />
 
-      </TouchableOpacity>
+        </TouchableOpacity>
       </View>
 
       <View style={styles.checkBox}>
@@ -184,6 +190,18 @@ const Task = ({ navigation }) => {
           }
         </TouchableOpacity>
       </View>
+      {image ?
+        <View style={styles.imageViewStyle}>
+          <Image
+            style={styles.tinyLogo}
+            source={{
+              uri: image,
+            }}
+          />
+        </View>
+        : null
+
+      }
       <TouchableOpacity style={styles.button}
         onPress={onPressHandle} >
         <Text style={styles.text}>Save Task</Text>
@@ -195,7 +213,6 @@ const Task = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   input: {
-
     borderColor: '#000000',
     borderWidth: 1,
     margin: 10,
@@ -257,24 +274,30 @@ const styles = StyleSheet.create({
   extraRow: {
     margin: 10,
     height: 50,
-  //  backgroundColor: '#f8674f',
-    flexDirection:'row',
-    
+    //  backgroundColor: '#f8674f',
+    flexDirection: 'row',
+
+  },
+  tinyLogo: {
+    width: 100,
+    height: 100,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   extraButton: {
-    marginRight:10,
+    marginRight: 10,
     height: 50,
     backgroundColor: '#f8674f',
-    flex:1,
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
 
   },
   extraButtonCamera: {
-    marginLeft:10,
+    marginLeft: 10,
     height: 50,
     backgroundColor: '#00FF00',
-    flex:1,
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
 
@@ -300,18 +323,18 @@ const styles = StyleSheet.create({
     // justifyContent: 'center',
     alignItems: 'center',
     // margin: 30
-    marginTop:30
+    marginTop: 30
   },
   bellButton: {
     flexDirection: 'row',
     height: 50,
-    marginTop:10
+    marginTop: 10
 
   },
   bellInput: {
 
     height: 50,
-    width:50,
+    width: 50,
     borderRadius: 20,
     borderWidth: 1,
     borderColor: '#555555',
@@ -319,7 +342,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     textAlign: 'center',
     fontSize: 20,
-     margin: 10
+    margin: 10
   },
   bellCancelButton: {
 
@@ -331,13 +354,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   bellOkButton: {
-
     flex: 1,
     borderWidth: 1,
     borderColor: '#000000',
     borderBottomRightRadius: 20,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  imageViewStyle:{
+    flexDirection:'row'
   }
 })
 
