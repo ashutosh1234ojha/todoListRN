@@ -55,7 +55,8 @@ const Todo = ({ navigation }) => {
         ID: newTasks[index].ID,
         Title: newTasks[index].Title,
         Desc: newTasks[index].Desc,
-        Done: newValue
+        Done: newValue,
+        Image: newTasks[index].Image,
       }
 
       //newTasks[index].Done = newValue;

@@ -41,20 +41,17 @@ const Camera = ({ navigation, route }) => {
 
     const updateTask = (id, path) => {
         try {
-
-          
-
             const index = todos.tasks.findIndex(task => task.ID === id);
             let newTask = [];
             if (index > -1) {
 
                 const Task = {
-                    ID: index,
+                    ID: todos.taskID,
                     Title: todos.tasks[index].Title,
                     Desc: todos.tasks[index].Desc,
                     Done: todos.tasks[index].Done,
                     Color: todos.tasks[index].Color,
-                    Image: todos.tasks[index].Image
+                    Image: path
                 }
 
                 newTask = [...todos.tasks];
@@ -70,23 +67,23 @@ const Camera = ({ navigation, route }) => {
                 navigation.goBack();
 
             }
-            else {
-                const Task = {
-                    ID: 1,
-                    Title:"",
-                    Desc: "",
-                    Done: false,
-                    Color: "#00Fd00",
-                    Image: path
-                }
-                newTask = [...todos.tasks, Task];
-                AsyncStorage.setItem("Tasks", JSON.stringify(newTask)).then(() => {
-                    // dispatch(setTask(newTask))
-                    dispatch(setTask(newTask))
-                  }).catch(err => console.log(err))
-                Alert.alert("Successfully task image saved");
-                navigation.goBack();
-            }
+            // else {
+            //     const Task = {
+            //         ID: todos.taskID,
+            //         Title:"",
+            //         Desc: "",
+            //         Done: false,
+            //         Color: "#00Fd00",
+            //         Image: path
+            //     }
+            //     newTask = [...todos.tasks, Task];
+            //     AsyncStorage.setItem("Tasks", JSON.stringify(newTask)).then(() => {
+            //         // dispatch(setTask(newTask))
+            //         dispatch(setTask(newTask))
+            //       }).catch(err => console.log(err))
+            //     Alert.alert("Successfully task image saved");
+            //     navigation.goBack();
+            // }
 
         } catch (error) {
             console.log(error)
