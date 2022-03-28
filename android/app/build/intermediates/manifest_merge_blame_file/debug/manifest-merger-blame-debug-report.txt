@@ -31,94 +31,338 @@
 20        android:required="false" />
 20-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:7:60-84
 21
-22    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-22-->[com.facebook.flipper:flipper:0.99.0] /Users/ashutoshojha/.gradle/caches/transforms-3/df7b208c45426f45016d16c0c3a6a059/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:16:5-76
-22-->[com.facebook.flipper:flipper:0.99.0] /Users/ashutoshojha/.gradle/caches/transforms-3/df7b208c45426f45016d16c0c3a6a059/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:16:22-73
-23
-24    <queries>
-24-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-13:15
-25        <intent>
-25-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-12:18
-26            <action android:name="android.media.action.IMAGE_CAPTURE" />
-26-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-73
-26-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:21-70
-27        </intent>
-28    </queries>
-29
-30    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-30-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:5-81
-30-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:22-78
+22    <uses-permission android:name="android.permission.VIBRATE" />
+22-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:9:1-62
+22-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:9:18-59
+23    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+23-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:10:5-80
+23-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:10:22-78
+24    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+24-->[com.facebook.flipper:flipper:0.99.0] /Users/ashutoshojha/.gradle/caches/transforms-3/df7b208c45426f45016d16c0c3a6a059/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:16:5-76
+24-->[com.facebook.flipper:flipper:0.99.0] /Users/ashutoshojha/.gradle/caches/transforms-3/df7b208c45426f45016d16c0c3a6a059/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:16:22-73
+25
+26    <queries>
+26-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-13:15
+27        <intent>
+27-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-12:18
+28            <action android:name="android.media.action.IMAGE_CAPTURE" />
+28-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-73
+28-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:21-70
+29        </intent>
+30    </queries>
 31
-32    <application
-32-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:10:5-28:19
-33        android:name="com.todolistrn.MainApplication"
-33-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:11:7-38
-34        android:allowBackup="false"
-34-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:15:7-34
-35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-35-->[androidx.core:core:1.6.0] /Users/ashutoshojha/.gradle/caches/transforms-3/9f18c6b50baa776d71894ad120630276/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
-36        android:debuggable="true"
-37        android:icon="@mipmap/ic_launcher"
-37-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:13:7-41
-38        android:label="@string/app_name"
-38-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:12:7-39
-39        android:roundIcon="@mipmap/ic_launcher_round"
-39-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:14:7-52
-40        android:theme="@style/AppTheme"
-40-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:16:7-38
-41        android:usesCleartextTraffic="true" >
-41-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/debug/AndroidManifest.xml:8:9-44
-42        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-42-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/debug/AndroidManifest.xml:11:9-86
-42-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/debug/AndroidManifest.xml:11:19-83
-43        <activity
-43-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:17:7-27:18
-44            android:name="com.todolistrn.MainActivity"
-44-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:18:9-37
-45            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-45-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:20:9-86
-46            android:label="@string/app_name"
-46-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:19:9-41
-47            android:launchMode="singleTask"
-47-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:21:9-40
-48            android:windowSoftInputMode="adjustResize" >
-48-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:22:9-51
-49            <intent-filter>
-49-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:23:9-26:25
-50                <action android:name="android.intent.action.MAIN" />
-50-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:24:13-65
-50-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:24:21-62
-51
-52                <category android:name="android.intent.category.LAUNCHER" />
-52-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:25:13-73
-52-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:25:23-70
-53            </intent-filter>
-54        </activity>
-55
-56        <provider
-56-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:9-26:20
-57            android:name="androidx.core.content.FileProvider"
-57-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-62
-58            android:authorities="com.todolistrn.provider"
-58-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-60
-59            android:exported="false"
-59-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-37
-60            android:grantUriPermissions="true" >
-60-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-47
-61            <meta-data
-61-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-25:58
-62                android:name="android.support.FILE_PROVIDER_PATHS"
-62-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:17-67
-63                android:resource="@xml/provider_paths" />
-63-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:17-55
-64        </provider>
-65
-66        <activity
-66-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:9-30:72
-67            android:name="com.yalantis.ucrop.UCropActivity"
-67-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:29:13-60
-68            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-68-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:30:13-69
-69    </application>
-70
-71</manifest>
+32    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+32-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:5-81
+32-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:22-78
+33    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+33-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:22:5-79
+33-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:22:22-76
+34    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+34-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:23:5-68
+34-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:23:22-65
+35    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- for android -->
+35-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:25:5-82
+35-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:25:22-79
+36    <!-- <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/> -->
+37    <!-- <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/> -->
+38    <!-- <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" /> -->
+39    <!-- <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" /> -->
+40    <!-- for Samsung -->
+41    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+41-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:19:5-86
+41-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:19:22-83
+42    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- for htc -->
+42-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:20:5-87
+42-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:20:22-84
+43    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+43-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:23:5-81
+43-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:23:22-78
+44    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- for sony -->
+44-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:24:5-83
+44-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:24:22-80
+45    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+45-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:27:5-88
+45-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:27:22-85
+46    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" /> <!-- for apex -->
+46-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:28:5-92
+46-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:28:22-89
+47    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- for solid -->
+47-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:31:5-84
+47-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:31:22-81
+48    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" /> <!-- for huawei -->
+48-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:34:5-83
+48-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:34:22-80
+49    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+49-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:37:5-91
+49-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:37:22-88
+50    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+50-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:38:5-92
+50-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:38:22-89
+51    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" /> <!-- for ZUK -->
+51-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:39:5-93
+51-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:39:22-90
+52    <uses-permission android:name="android.permission.READ_APP_BADGE" /> <!-- for OPPO -->
+52-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:42:5-73
+52-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:42:22-70
+53    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+53-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:45:5-82
+53-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:45:22-79
+54    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" /> <!-- for EvMe -->
+54-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:46:5-83
+54-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:46:22-80
+55    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+55-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:49:5-88
+55-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:49:22-85
+56    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+56-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:50:5-89
+56-->[me.leolin:ShortcutBadger:1.1.22] /Users/ashutoshojha/.gradle/caches/transforms-3/a902663d349ad7dce10daaa89fb5471b/transformed/jetified-ShortcutBadger-1.1.22/AndroidManifest.xml:50:22-86
+57
+58    <application
+58-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:13:5-55:19
+59        android:name="com.todolistrn.MainApplication"
+59-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:14:7-38
+60        android:allowBackup="false"
+60-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:18:7-34
+61        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+61-->[androidx.core:core:1.6.0] /Users/ashutoshojha/.gradle/caches/transforms-3/9f18c6b50baa776d71894ad120630276/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+62        android:debuggable="true"
+63        android:icon="@mipmap/ic_launcher"
+63-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:16:7-41
+64        android:label="@string/app_name"
+64-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:15:7-39
+65        android:roundIcon="@mipmap/ic_launcher_round"
+65-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:17:7-52
+66        android:theme="@style/AppTheme"
+66-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:19:7-38
+67        android:usesCleartextTraffic="true" >
+67-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/debug/AndroidManifest.xml:8:9-44
+68        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+68-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/debug/AndroidManifest.xml:11:9-86
+68-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/debug/AndroidManifest.xml:11:19-83
+69        <activity
+69-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:20:7-30:18
+70            android:name="com.todolistrn.MainActivity"
+70-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:21:9-37
+71            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+71-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:23:9-86
+72            android:label="@string/app_name"
+72-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:22:9-41
+73            android:launchMode="singleTask"
+73-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:24:9-40
+74            android:windowSoftInputMode="adjustResize" >
+74-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:25:9-51
+75            <intent-filter>
+75-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:26:9-29:25
+76                <action android:name="android.intent.action.MAIN" />
+76-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:27:13-65
+76-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:27:21-62
+77
+78                <category android:name="android.intent.category.LAUNCHER" />
+78-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:28:13-73
+78-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:28:23-70
+79            </intent-filter>
+80        </activity>
+81
+82        <meta-data
+82-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:32:8-33:44
+83            android:name="com.dieam.reactnativepushnotification.notification_foreground"
+83-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:32:20-96
+84            android:value="false" /> <!-- Change the resource name to your App's accent color - or any other color you want -->
+84-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:33:21-42
+85        <meta-data
+85-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:35:9-36:54
+86            android:name="com.dieam.reactnativepushnotification.notification_color"
+86-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:35:21-92
+87            android:resource="@color/white" /> <!-- or @android:color/{name} to use a standard color -->
+87-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:36:21-52
+88        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationActions" />
+88-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:38:9-108
+88-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:38:19-105
+89        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationPublisher" />
+89-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:39:9-110
+89-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:39:19-107
+90        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationBootEventReceiver" >
+90-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:40:9-46:20
+90-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:40:19-115
+91            <intent-filter>
+91-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:41:13-45:29
+92                <action android:name="android.intent.action.BOOT_COMPLETED" />
+92-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:42:17-79
+92-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:42:25-76
+93                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+93-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:43:17-82
+93-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:43:25-79
+94                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+94-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:44:17-81
+94-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:44:25-79
+95            </intent-filter>
+96        </receiver>
+97
+98        <service
+98-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:48:9-54:19
+99            android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationListenerService"
+99-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:49:13-107
+100            android:exported="false" >
+100-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:50:13-37
+101            <intent-filter>
+101-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:51:13-53:29
+102                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+102-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:52:17-78
+102-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:52:25-75
+103            </intent-filter>
+104        </service>
+105
+106        <provider
+106-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:9-26:20
+107            android:name="androidx.core.content.FileProvider"
+107-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-62
+108            android:authorities="com.todolistrn.provider"
+108-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-60
+109            android:exported="false"
+109-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-37
+110            android:grantUriPermissions="true" >
+110-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-47
+111            <meta-data
+111-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-25:58
+112                android:name="android.support.FILE_PROVIDER_PATHS"
+112-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:17-67
+113                android:resource="@xml/provider_paths" />
+113-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:17-55
+114        </provider>
+115
+116        <activity
+116-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:9-30:72
+117            android:name="com.yalantis.ucrop.UCropActivity"
+117-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:29:13-60
+118            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+118-->[:react-native-image-crop-picker] /Users/ashutoshojha/Documents/todoListReactNative/node_modules/react-native-image-crop-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:30:13-69
+119
+120        <receiver
+120-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:28:9-35:20
+121            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+121-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:29:13-78
+122            android:exported="true"
+122-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:30:13-36
+123            android:permission="com.google.android.c2dm.permission.SEND" >
+123-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:31:13-73
+124            <intent-filter>
+124-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:32:13-34:29
+125                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+125-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:33:17-81
+125-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:33:25-78
+126            </intent-filter>
+127        </receiver>
+128        <!--
+129             FirebaseMessagingService performs security checks at runtime,
+130             but set to not exported to explicitly avoid allowing another app to call it.
+131        -->
+132        <service
+132-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:41:9-48:19
+133            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+133-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:42:13-82
+134            android:directBootAware="true"
+134-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:43:13-43
+135            android:exported="false" >
+135-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:44:13-37
+136            <intent-filter android:priority="-500" >
+136-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:51:13-53:29
+137                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+137-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:52:17-78
+137-->/Users/ashutoshojha/Documents/todoListReactNative/android/app/src/main/AndroidManifest.xml:52:25-75
+138            </intent-filter>
+139        </service>
+140        <service
+140-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:49:9-55:19
+141            android:name="com.google.firebase.components.ComponentDiscoveryService"
+141-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:50:13-84
+142            android:directBootAware="true"
+142-->[com.google.firebase:firebase-common:19.5.0] /Users/ashutoshojha/.gradle/caches/transforms-3/a5f2fb6e0e6fab7278e3c8199a106914/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:35:13-43
+143            android:exported="false" >
+143-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:51:13-37
+144            <meta-data
+144-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:52:13-54:85
+145                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+145-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:53:17-119
+146                android:value="com.google.firebase.components.ComponentRegistrar" />
+146-->[com.google.firebase:firebase-messaging:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/33bc54ad3f6bbb91bcabb9f93aacc8aa/transformed/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:54:17-82
+147            <meta-data
+147-->[com.google.firebase:firebase-datatransport:17.0.10] /Users/ashutoshojha/.gradle/caches/transforms-3/f17bf12b44a0aafd05050e31795ef5e4/transformed/jetified-firebase-datatransport-17.0.10/AndroidManifest.xml:28:13-30:85
+148                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+148-->[com.google.firebase:firebase-datatransport:17.0.10] /Users/ashutoshojha/.gradle/caches/transforms-3/f17bf12b44a0aafd05050e31795ef5e4/transformed/jetified-firebase-datatransport-17.0.10/AndroidManifest.xml:29:17-115
+149                android:value="com.google.firebase.components.ComponentRegistrar" />
+149-->[com.google.firebase:firebase-datatransport:17.0.10] /Users/ashutoshojha/.gradle/caches/transforms-3/f17bf12b44a0aafd05050e31795ef5e4/transformed/jetified-firebase-datatransport-17.0.10/AndroidManifest.xml:30:17-82
+150            <meta-data
+150-->[com.google.firebase:firebase-iid:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/450e799d82ae9c3e4fdeb8415fc8982b/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:32:13-34:85
+151                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+151-->[com.google.firebase:firebase-iid:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/450e799d82ae9c3e4fdeb8415fc8982b/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:33:17-96
+152                android:value="com.google.firebase.components.ComponentRegistrar" />
+152-->[com.google.firebase:firebase-iid:21.1.0] /Users/ashutoshojha/.gradle/caches/transforms-3/450e799d82ae9c3e4fdeb8415fc8982b/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:34:17-82
+153            <meta-data
+153-->[com.google.firebase:firebase-installations:16.3.5] /Users/ashutoshojha/.gradle/caches/transforms-3/1084e891911710c2c943f6c559b3d6da/transformed/jetified-firebase-installations-16.3.5/AndroidManifest.xml:18:13-20:85
+154                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+154-->[com.google.firebase:firebase-installations:16.3.5] /Users/ashutoshojha/.gradle/caches/transforms-3/1084e891911710c2c943f6c559b3d6da/transformed/jetified-firebase-installations-16.3.5/AndroidManifest.xml:19:17-127
+155                android:value="com.google.firebase.components.ComponentRegistrar" />
+155-->[com.google.firebase:firebase-installations:16.3.5] /Users/ashutoshojha/.gradle/caches/transforms-3/1084e891911710c2c943f6c559b3d6da/transformed/jetified-firebase-installations-16.3.5/AndroidManifest.xml:20:17-82
+156            <!--
+157                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
+158                clients to use it as well, by defining this registrar in their own core/common library.
+159            -->
+160            <meta-data
+160-->[com.google.firebase:firebase-common:19.5.0] /Users/ashutoshojha/.gradle/caches/transforms-3/a5f2fb6e0e6fab7278e3c8199a106914/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:43:13-45:85
+161                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+161-->[com.google.firebase:firebase-common:19.5.0] /Users/ashutoshojha/.gradle/caches/transforms-3/a5f2fb6e0e6fab7278e3c8199a106914/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:44:17-121
+162                android:value="com.google.firebase.components.ComponentRegistrar" />
+162-->[com.google.firebase:firebase-common:19.5.0] /Users/ashutoshojha/.gradle/caches/transforms-3/a5f2fb6e0e6fab7278e3c8199a106914/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:45:17-82
+163        </service>
+164        <service
+164-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/ashutoshojha/.gradle/caches/transforms-3/61c4b96fd6afa09eb1be3604e1af824c/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
+165            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+165-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/ashutoshojha/.gradle/caches/transforms-3/61c4b96fd6afa09eb1be3604e1af824c/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:30:13-103
+166            android:exported="false" >
+166-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/ashutoshojha/.gradle/caches/transforms-3/61c4b96fd6afa09eb1be3604e1af824c/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:31:13-37
+167            <meta-data
+167-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/ashutoshojha/.gradle/caches/transforms-3/61c4b96fd6afa09eb1be3604e1af824c/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:32:13-34:39
+168                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+168-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/ashutoshojha/.gradle/caches/transforms-3/61c4b96fd6afa09eb1be3604e1af824c/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
+169                android:value="cct" />
+169-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/ashutoshojha/.gradle/caches/transforms-3/61c4b96fd6afa09eb1be3604e1af824c/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
+170        </service>
+171        <service
+171-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/ashutoshojha/.gradle/caches/transforms-3/4221cb86e7c6b389f6af5d025096cf07/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:26:9-30:19
+172            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+172-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/ashutoshojha/.gradle/caches/transforms-3/4221cb86e7c6b389f6af5d025096cf07/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:27:13-117
+173            android:exported="false"
+173-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/ashutoshojha/.gradle/caches/transforms-3/4221cb86e7c6b389f6af5d025096cf07/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:28:13-37
+174            android:permission="android.permission.BIND_JOB_SERVICE" >
+174-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/ashutoshojha/.gradle/caches/transforms-3/4221cb86e7c6b389f6af5d025096cf07/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:29:13-69
+175        </service>
+176
+177        <receiver
+177-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/ashutoshojha/.gradle/caches/transforms-3/4221cb86e7c6b389f6af5d025096cf07/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:32:9-34:40
+178            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+178-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/ashutoshojha/.gradle/caches/transforms-3/4221cb86e7c6b389f6af5d025096cf07/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:33:13-132
+179            android:exported="false" />
+179-->[com.google.android.datatransport:transport-runtime:2.2.5] /Users/ashutoshojha/.gradle/caches/transforms-3/4221cb86e7c6b389f6af5d025096cf07/transformed/jetified-transport-runtime-2.2.5/AndroidManifest.xml:34:13-37
+180
+181        <provider
+181-->[com.google.firebase:firebase-common:19.5.0] /Users/ashutoshojha/.gradle/caches/transforms-3/a5f2fb6e0e6fab7278e3c8199a106914/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:26:9-31:39
+182            android:name="com.google.firebase.provider.FirebaseInitProvider"
+182-->[com.google.firebase:firebase-common:19.5.0] /Users/ashutoshojha/.gradle/caches/transforms-3/a5f2fb6e0e6fab7278e3c8199a106914/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:27:13-77
+183            android:authorities="com.todolistrn.firebaseinitprovider"
+183-->[com.google.firebase:firebase-common:19.5.0] /Users/ashutoshojha/.gradle/caches/transforms-3/a5f2fb6e0e6fab7278e3c8199a106914/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:28:13-72
+184            android:directBootAware="true"
+184-->[com.google.firebase:firebase-common:19.5.0] /Users/ashutoshojha/.gradle/caches/transforms-3/a5f2fb6e0e6fab7278e3c8199a106914/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:29:13-43
+185            android:exported="false"
+185-->[com.google.firebase:firebase-common:19.5.0] /Users/ashutoshojha/.gradle/caches/transforms-3/a5f2fb6e0e6fab7278e3c8199a106914/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:30:13-37
+186            android:initOrder="100" />
+186-->[com.google.firebase:firebase-common:19.5.0] /Users/ashutoshojha/.gradle/caches/transforms-3/a5f2fb6e0e6fab7278e3c8199a106914/transformed/jetified-firebase-common-19.5.0/AndroidManifest.xml:31:13-36
+187
+188        <meta-data
+188-->[com.google.android.gms:play-services-basement:17.0.0] /Users/ashutoshojha/.gradle/caches/transforms-3/0e3d0c4f5635e0c3c0cfa0e0064e8f7e/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+189            android:name="com.google.android.gms.version"
+189-->[com.google.android.gms:play-services-basement:17.0.0] /Users/ashutoshojha/.gradle/caches/transforms-3/0e3d0c4f5635e0c3c0cfa0e0064e8f7e/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+190            android:value="@integer/google_play_services_version" />
+190-->[com.google.android.gms:play-services-basement:17.0.0] /Users/ashutoshojha/.gradle/caches/transforms-3/0e3d0c4f5635e0c3c0cfa0e0064e8f7e/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+191    </application>
+192
+193</manifest>

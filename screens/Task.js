@@ -10,6 +10,7 @@ import { TextInput } from 'react-native-gesture-handler';
 import { useSelector, useDispatch } from 'react-redux'
 import { setTask, setTaskId } from '../redux/todoSlice'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import PushNotification from "react-native-push-notification";
 
 
 const Task = ({ navigation }) => {
@@ -82,7 +83,15 @@ const Task = ({ navigation }) => {
   }
 
   const setTaskAlarm = () => {
-
+  
+    PushNotification.localNotificationSchedule({
+      channelId: "channel-id", 
+      channelName: "My channel", // (required)
+      title: title,
+      message:desc,
+      date: new Date(Date.now() + parseInt(bellTime)*60 * 1000),
+      allowWhileIdle:true
+  })
   }
 
   const navigateToCamera = () => {
@@ -122,7 +131,10 @@ const Task = ({ navigation }) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.bellOkButton}
-                  onPress={() => { setShowBellModal(false) }}
+                  onPress={() => {
+                     setShowBellModal(false)
+                     setTaskAlarm() 
+                     }}
                 >
                   <Text style={styles.text}>Ok</Text>
                 </TouchableOpacity>
@@ -145,7 +157,9 @@ const Task = ({ navigation }) => {
 
       <View style={styles.extraRow}>
         <TouchableOpacity style={styles.extraButton}
-          onPress={() => { setTaskAlarm() }} >
+          onPress={() => { 
+            setShowBellModal(true)
+          }} >
           <FontAwesome5 name={'bell'} size={14} color={'#000000'} />
 
         </TouchableOpacity>

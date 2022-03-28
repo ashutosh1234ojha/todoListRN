@@ -14,12 +14,25 @@ import {
 } from 'react-native';
 
 import GlobalStylesheet from '../globalstyle/GlobalStylesheet';
+import PushNotification from "react-native-push-notification";
+
 
 
 
 const Splash = ({navigation}) => {
 
+
+  const createChannel = () => {
+    PushNotification.createChannel(
+        {
+            channelId: "channel-id", // (required)
+            channelName: "My channel", // (required)
+        },
+    );
+}
+
   useEffect(()=>{
+    createChannel()
     setTimeout(()=>{
       navigation.replace('HomeTabs')
     },2000);
