@@ -3,7 +3,7 @@ import CheckBox from '@react-native-community/checkbox';
 
 import React, { useEffect, useState } from 'react';
 import {
-  View, Text, StyleSheet, TouchableOpacity, Alert, Modal, Image
+  View, Text, StyleSheet, TouchableOpacity, Alert, Modal, Image, ScrollView
 } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 
@@ -30,7 +30,7 @@ const Task = ({ navigation }) => {
   const getTask = () => {
     const Task = todos.tasks.find(task => task.ID === todos.taskID)
     if (Task) {
-      console.log("Task "+Task.Image)
+      console.log("Task " + Task.Image)
 
       setTitle(Task.Title)
       setDesc(Task.Desc)
@@ -83,15 +83,15 @@ const Task = ({ navigation }) => {
   }
 
   const setTaskAlarm = () => {
-  
+
     PushNotification.localNotificationSchedule({
-      channelId: "channel-id", 
+      channelId: "channel-id",
       channelName: "My channel", // (required)
       title: title,
-      message:desc,
-      date: new Date(Date.now() + parseInt(bellTime)*60 * 1000),
-      allowWhileIdle:true
-  })
+      message: desc,
+      date: new Date(Date.now() + parseInt(bellTime) * 60 * 1000),
+      allowWhileIdle: true
+    })
   }
 
   const navigateToCamera = () => {
@@ -102,126 +102,129 @@ const Task = ({ navigation }) => {
 
 
   return (
-    <View >
-      <Modal
-        visible={showBellModal}
-        transparent
-        onRequestClose={() => {
-          setShowBellModal(false)
-        }}
-        animationType='slide'
-        hardwareAccelerated
-      >
+    <ScrollView>
+      <View >
+        <Modal
+          visible={showBellModal}
+          transparent
+          onRequestClose={() => {
+            setShowBellModal(false)
+          }}
+          animationType='slide'
+          hardwareAccelerated
+        >
 
-        <View style={styles.centeredView}>
+          <View style={styles.centeredView}>
 
-          <View style={styles.bellModal}>
-            <View style={styles.bellBody}>
+            <View style={styles.bellModal}>
+              <View style={styles.bellBody}>
 
-              <Text style={styles.text}>Remind me After</Text>
-              <TextInput style={styles.bellInput}
-                keyboardType='numeric'
-                value={bellTime}
-                onChangeText={(value) => setBellTime(value)}
-              />
-              <Text style={styles.text}>minute(s)</Text>
-              <View style={styles.bellButton}>
-                <TouchableOpacity style={styles.bellCancelButton} onPress={() => { setShowBellModal(false) }}>
-                  <Text style={styles.text}>Cancel</Text>
-                </TouchableOpacity>
+                <Text style={styles.text}>Remind me After</Text>
+                <TextInput style={styles.bellInput}
+                  keyboardType='numeric'
+                  value={bellTime}
+                  onChangeText={(value) => setBellTime(value)}
+                />
+                <Text style={styles.text}>minute(s)</Text>
+                <View style={styles.bellButton}>
+                  <TouchableOpacity style={styles.bellCancelButton} onPress={() => { setShowBellModal(false) }}>
+                    <Text style={styles.text}>Cancel</Text>
+                  </TouchableOpacity>
 
-                <TouchableOpacity style={styles.bellOkButton}
-                  onPress={() => {
-                     setShowBellModal(false)
-                     setTaskAlarm() 
-                     }}
-                >
-                  <Text style={styles.text}>Ok</Text>
-                </TouchableOpacity>
+                  <TouchableOpacity style={styles.bellOkButton}
+                    onPress={() => {
+                      setShowBellModal(false)
+                      setTaskAlarm()
+                    }}
+                  >
+                    <Text style={styles.text}>Ok</Text>
+                  </TouchableOpacity>
 
+                </View >
               </View >
             </View >
+
           </View >
+        </Modal>
+        <TextInput style={styles.input}
+          value={title}
+          placeholder='Title'
+          onChangeText={(value) => setTitle(value)} />
 
-        </View >
-      </Modal>
-      <TextInput style={styles.input}
-        value={title}
-        placeholder='Title'
-        onChangeText={(value) => setTitle(value)} />
+        <TextInput style={styles.input}
+          value={desc}
+          placeholder='Description'
+          onChangeText={(value) => setDesc(value)} />
 
-      <TextInput style={styles.input}
-        value={desc}
-        placeholder='Description'
-        onChangeText={(value) => setDesc(value)} />
+        <View style={styles.extraRow}>
+          <TouchableOpacity style={styles.extraButton}
+            onPress={() => {
+              setShowBellModal(true)
+            }} >
+            <FontAwesome5 name={'bell'} size={14} color={'#000000'} />
 
-      <View style={styles.extraRow}>
-        <TouchableOpacity style={styles.extraButton}
-          onPress={() => { 
-            setShowBellModal(true)
-          }} >
-          <FontAwesome5 name={'bell'} size={14} color={'#000000'} />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.extraButtonCamera}
+            onPress={() => { navigateToCamera() }} >
+            <FontAwesome5 name={'camera'} size={14} color={'#000000'} />
 
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.extraButtonCamera}
-          onPress={() => { navigateToCamera() }} >
-          <FontAwesome5 name={'camera'} size={14} color={'#000000'} />
-
-        </TouchableOpacity>
-      </View>
-
-      <View style={styles.checkBox}>
-        <CheckBox
-          disabled={false}
-          value={done}
-          onValueChange={(newValue) => setDone(newValue)}
-        />
-        <Text style={styles.checkBoxText}>Task Done</Text>
-      </View>
-      <View style={styles.colorBar}>
-        <TouchableOpacity style={styles.colorYellow}
-          onPress={() => { setColor('Yellow') }} >
-          {
-            color === 'Yellow' && <FontAwesome5 name={'check'} size={14} color={'#000000'} />
-          }
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.colorAquamarine}
-          onPress={() => { setColor('Aquamarine') }}>
-          {
-            color === 'Aquamarine' && <FontAwesome5 name={'check'} size={14} color={'#000000'} />
-          }
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.colorBlue}
-          onPress={() => { setColor('Blue') }} >
-          {
-            color === 'Blue' && <FontAwesome5 name={'check'} size={14} color={'#000000'} />
-          }
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.colorGreen}
-          onPress={() => { setColor('Green') }} >
-          {
-            color === 'Green' && <FontAwesome5 name={'check'} size={14} color={'#000000'} />
-          }
-        </TouchableOpacity>
-      </View>
-      {image ?
-        <View style={styles.imageViewStyle}>
-          <Image
-            style={styles.tinyLogo}
-            source={{
-              uri: image,
-            }}
-          />
+          </TouchableOpacity>
         </View>
-        : null
 
-      }
-      <TouchableOpacity style={styles.button}
-        onPress={onPressHandle} >
-        <Text style={styles.text}>Save Task</Text>
-      </TouchableOpacity>
+        <View style={styles.checkBox}>
+          <CheckBox
+            disabled={false}
+            value={done}
+            onValueChange={(newValue) => setDone(newValue)}
+          />
+          <Text style={styles.checkBoxText}>Task Done</Text>
+        </View>
+        <View style={styles.colorBar}>
+          <TouchableOpacity style={styles.colorYellow}
+            onPress={() => { setColor('Yellow') }} >
+            {
+              color === 'Yellow' && <FontAwesome5 name={'check'} size={14} color={'#000000'} />
+            }
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.colorAquamarine}
+            onPress={() => { setColor('Aquamarine') }}>
+            {
+              color === 'Aquamarine' && <FontAwesome5 name={'check'} size={14} color={'#000000'} />
+            }
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.colorBlue}
+            onPress={() => { setColor('Blue') }} >
+            {
+              color === 'Blue' && <FontAwesome5 name={'check'} size={14} color={'#000000'} />
+            }
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.colorGreen}
+            onPress={() => { setColor('Green') }} >
+            {
+              color === 'Green' && <FontAwesome5 name={'check'} size={14} color={'#000000'} />
+            }
+          </TouchableOpacity>
+        </View>
+        {image ?
+          <View style={styles.imageViewStyle}>
+            <Image
+              style={styles.tinyLogo}
+              source={{
+                uri: image,
+              }}
+            />
+          </View>
+          : null
 
-    </View>
+        }
+        <TouchableOpacity style={styles.button}
+          onPress={onPressHandle} >
+          <Text style={styles.text}>Save Task</Text>
+        </TouchableOpacity>
+
+      </View>
+    </ScrollView>
+
   );
 };
 
@@ -292,12 +295,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
 
   },
-  tinyLogo: {
-    width: 100,
-    height: 100,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+
   extraButton: {
     marginRight: 10,
     height: 50,
@@ -375,9 +373,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  imageViewStyle:{
-    flexDirection:'row'
-  }
+  imageViewStyle: {
+     flexDirection:'row',
+    justifyContent: 'center',
+     alignItems: 'center',
+     padding:20
+  },
+  tinyLogo: {
+    width: 300,
+    height: 400,
+    resizeMode: 'stretch'
+   
+  },
 })
 
 export default Task;
